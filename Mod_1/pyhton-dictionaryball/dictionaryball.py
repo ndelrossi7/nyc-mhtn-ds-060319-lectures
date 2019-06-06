@@ -1,4 +1,4 @@
-game_dictionary = {'home': {'team_name': 'Brooklyn Nets',
+game_dict = {'home': {'team_name': 'Brooklyn Nets',
                             'colors': ['Black', 'White'],
                             'players': {'Alan Anderson': {
                                             'number': 0,
@@ -103,3 +103,11 @@ game_dictionary = {'home': {'team_name': 'Brooklyn Nets',
                                             'blocks': 5,
                                             'slam_dunks': 12
                                         }}}}
+# def good_practices():
+#     for location, team_stats in game_dict().items():
+#         import pdb; pdb.set_trace()
+#         for stats, data in team_stats.items():
+#             import pdb; pdb.set_trace()
+#             for item in data:
+#                 print(item)
+# good_practices()

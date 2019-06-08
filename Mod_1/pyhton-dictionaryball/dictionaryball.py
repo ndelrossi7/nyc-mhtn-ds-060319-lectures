@@ -103,11 +103,89 @@ game_dict = {'home': {'team_name': 'Brooklyn Nets',
                                             'blocks': 5,
                                             'slam_dunks': 12
                                         }}}}
-# def good_practices():
-#     for location, team_stats in game_dict().items():
-#         import pdb; pdb.set_trace()
-#         for stats, data in team_stats.items():
-#             import pdb; pdb.set_trace()
-#             for item in data:
-#                 print(item)
-# good_practices()
+
+
+def num_points_scored(name):
+    for line in game_dict: 
+        if name in game_dict['home']['players'].keys():
+            return game_dict['home']['players'][name]['points']
+        else:
+            return game_dict['away']['players'][name]['points']
+
+def shoe_size(name):
+    for line in game_dict: 
+        if name in game_dict['home']['players'].keys():
+            return game_dict['home']['players'][name]['shoe']
+        else:
+            return game_dict['away']['players'][name]['shoe']
+        
+def team_colors(team):
+    for line in game_dict:
+        if team in game_dict['home']['team_name']:
+            return game_dict['home']['colors']
+        else:
+            return game_dict['away']['colors']
+
+def team_names():
+    team_names = []
+    for team in game_dict.keys():
+        team_names.append(game_dict[team]['team_name'])
+    return team_names
+
+def player_numbers(team):
+    numbers = []
+    if team in game_dict['home']['team_name']:
+        for player in game_dict['home']['players'].values():
+            numbers.append(player['number'])
+    else:
+        for player in game_dict['away']['players'].values():
+            numbers.append(player['number'])
+    return numbers
+    
+def player_stats(name):
+    for line in game_dict:
+        if name in game_dict['home']['players']:
+            return game_dict['home']['players'][name]
+        else:
+            return game_dict['away']['players'][name]
+
+def big_shoe_rebounds():
+    players = []
+    for team in game_dict.keys():
+        for key in game_dict[team]['players'].keys():
+            players.append(key)
+    size = 0
+    name = ' '
+    for player in players:
+        temp = shoe_size(player)
+        if temp > size:
+            size = temp
+            name = player
+    player_stat = player_stats(name)
+    return player_stat['rebounds']
+
+# bonus
+
+def most_points_scored():
+    players = []
+    for team in game_dict.keys():
+        for key in game_dict[team]['players'].keys():
+            players.append(key)
+    size = 0
+    name = ' '
+    for player in players:
+        temp = num_points_scored(player)
+        if temp > size:
+            size = temp
+            name = player
+    return name
+
+def winning_team():
+    home_team = game_dict['home']['players']
+    away_team = game_dict['away']['players']
+    score_home = sum([num_points_scored(x) for x in home_team])
+    score_away = sum([num_points_scored(x) for x in away_team])
+    if score_home > score_away:
+        return game_dict['home']['team_name']
+    else: 
+        return game_dict['away']['team_name']

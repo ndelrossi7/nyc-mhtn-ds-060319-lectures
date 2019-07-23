@@ -1,0 +1,10 @@
+,period,short_desc,temp,desc,temp_num
+0,Today,Mostly Sunny,High: 65 °F,"Today: Mostly sunny, with a high near 65. West wind around 13 mph. ",65
+1,Tonight,IncreasingClouds,Low: 54 °F,"Tonight: Increasing clouds, with a low around 54. West wind 9 to 13 mph. ",54
+2,Thursday,DecreasingClouds,High: 65 °F,"Thursday: Cloudy, then gradually becoming mostly sunny, with a high near 65. West wind 9 to 15 mph, with gusts as high as 20 mph. ",65
+3,ThursdayNight,Mostly Cloudy,Low: 55 °F,"Thursday Night: Mostly cloudy, with a low around 55. West wind 6 to 16 mph, with gusts as high as 21 mph. ",55
+4,Friday,Mostly Sunny,High: 67 °F,"Friday: Mostly sunny, with a high near 67. Light west northwest wind becoming west 9 to 14 mph in the afternoon. Winds could gust as high as 18 mph. ",67
+5,FridayNight,Mostly Clear,Low: 54 °F,"Friday Night: Mostly clear, with a low around 54.",54
+6,Saturday,Sunny,High: 67 °F,"Saturday: Sunny, with a high near 67.",67
+7,SaturdayNight,Clear,Low: 54 °F,"Saturday Night: Clear, with a low around 54.",54
+8,Sunday,Sunny,High: 68 °F,"Sunday: Sunny, with a high near 68.",68

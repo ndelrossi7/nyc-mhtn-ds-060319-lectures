@@ -37,12 +37,12 @@ def melt_data(df):
 long_df = melt_data(df)
 
 # melting dataframe for easier access for data analysis
-def melt_eda(df):
-    melted = pd.melt(df, id_vars=['RegionID', 'RegionName', 'City', 'State', 'Metro', 'CountyName', 'SizeRank'], var_name='time')
-    melted['time'] = pd.to_datetime(melted['time'], infer_datetime_format=True)
-    melted = melted.dropna(subset=['value'])
-    return melted
-eda = melt_eda(df)
+# def melt_eda(df):
+#     melted = pd.melt(df, id_vars=['RegionID', 'RegionName', 'City', 'State', 'Metro', 'CountyName', 'SizeRank'], var_name='time')
+#     melted['time'] = pd.to_datetime(melted['time'], infer_datetime_format=True)
+#     melted = melted.dropna(subset=['value'])
+#     return melted
+# eda = melt_eda(df)
 
 def dfuller(df, param):
     """Takes in the dataframe and parameter of interest and outputs the the 
